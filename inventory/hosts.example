@@ -1,0 +1,53 @@
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+## 可以是主机名或者是IP地址
+## green.example.com
+## blue.example.com
+## 192.168.100.1
+## 192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+## 定义主机组
+## [webservers]
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
+
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+## 一个范围主机001至006
+## www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+## [dbservers]
+## 定义主机组
+## db01.intranet.mydomain.net
+## db02.intranet.mydomain.net
+## 10.25.1.56
+## 10.25.1.57
+
+## children为固定格式，意思就是新定义一个组webdb包含webservers组和dbservers组的所有主机
+## [webdb:children]
+#  webservers
+#  dbservers
+
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+## 定义主机范围，如99至101
+## db-[99:101]-node.example.com
+
+
+

@@ -1,0 +1,4 @@
+---
+ntp_server: cn.pool.ntp.org
+ntp_network: 10.0.0.0/24
+ntp_client_server: 10.0.0.100

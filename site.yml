@@ -1,0 +1,6 @@
+---
+- hosts: ntp
+  remote_user: root
+  roles:
+    - { role: ntp, tags: [ 'ntp','ntp_server','ntp_client' ] } 
+

@@ -1,0 +1,4 @@
+---
+- name: restart NTP server
+  service: name=chronyd.service state=restarted
+
